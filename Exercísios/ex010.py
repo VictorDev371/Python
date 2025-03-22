@@ -1,8 +1,8 @@
 print('DESAFIO 010')
 
-real= int(input('Quanto de dinheiro você tem? '))
-dolar= real/3.27
+real = float(input('Quanto de dinheiro você tem? R$'))
 print('')
 
-print('Você tem {} reais, então você vai poder comprar {:.2f} dolares'.format(real, dolar ))
+print('Você tem R${}, então você vai poder comprar U${:.2f}'.format(
+    real, (real/3.27)))
 print('')
