@@ -1,7 +1,18 @@
-import random
-numero= int(input('Qual o número que você chuta? '))
-lista= [0, 1, 2, 3, 4, 5]
-if numero== random.choice(lista):
-    print('PARABÉNS, VOCÊ ACERTOU O NÚMERO!!!')
+from random import randint
+from time import sleep
+computador = randint(0, 5) # faz o computador sortear
+print("-=-" * 10)
+print('Em que um número entre 0 e 5.\n Tente adivinhar...')
+print("-=-" * 10)
+jogador = int(input("Em que número eu pensei? "))
+print("PROCESSANDO...")
+sleep(2)
+
+if jogador == computador:
+    print("PARABÉNS! Você conseguiu me vencer!")
 else:
-    print('Nah, I win')
+    print("GANHEI! Eu pensei no numero {} e não no {}".format(computador, jogador))
+
+
+
+
